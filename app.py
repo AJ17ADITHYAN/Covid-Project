@@ -7,15 +7,11 @@ import base64
 
 
 
-modelpath = r'models/covidtestmodel.h5'
+modelpath = 'models\covidtestmodel.h5'
 model = keras.models.load_model(modelpath)
 
-def get_img_as_base64(file):
-    with open(file, "rb") as f:
-        data = f.read()
-    return base64.b64encode(data).decode()
 
-img = get_img_as_base64("background.jpg")
+
 
 page_bg_img = f"""
 <style>
@@ -29,13 +25,6 @@ background-position: center;
 background-size: cover;
 background-repeat: no-repeat;
 background-attachment: local;
-}}
-
-[data-testid="stSidebar"] > div:first-child {{
-background-image: url("data:image/png;base64,{img}");
-background-position: center; 
-background-repeat: no-repeat;
-background-attachment: fixed;
 }}
 
 [data-testid="stHeader"] {{
