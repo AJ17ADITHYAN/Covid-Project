@@ -7,7 +7,7 @@ import base64
 
 
 
-modelpath = r'C:\Users\adith\Downloads\Covid Project-20230517T041225Z-001\Covid Project\models/covidtestmodel.h5'
+modelpath = r'models/covidtestmodel.h5'
 model = keras.models.load_model(modelpath)
 
 def get_img_as_base64(file):
