@@ -7,7 +7,7 @@ import base64
 
 
 
-modelpath = 'models\covidtestmodel.h5'
+modelpath = 'models/covidtestmodel.h5'
 model = keras.models.load_model(modelpath)
 
 
